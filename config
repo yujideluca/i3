@@ -202,9 +202,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 set $refresh_i3status killall -SIGUSR1 i3status
 
 # Increase brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id i3-sensible-terminal -e sudo brightlight -p -i 5
+bindsym XF86MonBrightnessUp exec --no-startup-id i3-sensible-terminal -e  light -A 5
 # Decrease brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id0 i3-sensible-terminal -e sudo brightlight -p -d 5
+bindsym XF86MonBrightnessDown exec --no-startup-id i3-sensible-terminal -e light -U 5
 
 # Touchpad controls
 bindsym XF86PowerOff exec systemctl suspend
@@ -227,15 +227,13 @@ new_window pixel 0
 
 # defaults minhas
 #wallpaper
-exec_always feh --bg-center ~/Downloads/walls/troco.jpg
+exec_always feh --bg-center ~/Downloads/walls/tux.png
 #network manager
 #exec_always nm-applet
 #terminal transparente
 exec_always compton
 #blue light filter
 exec i3-sensible-terminal -e redshift -x && redshift -O 3000
-#barra do gnome
-exec gnome-panel
 # hotkeys minhas
 bindsym $mod+Ctrl+r exec i3-sensible-terminal -e ranger
 bindsym $mod+Ctrl+c exec codium .config/i3/config
