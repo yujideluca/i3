@@ -202,9 +202,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 set $refresh_i3status killall -SIGUSR1 i3status
 
 # Increase brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id i3-sensible-terminal -e  light -A 5
+bindsym XF86MonBrightnessUp exec light -A 2
 # Decrease brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id i3-sensible-terminal -e light -U 5
+bindsym XF86MonBrightnessDown exec light -U 2
 
 # Touchpad controls
 bindsym XF86PowerOff exec systemctl suspend
@@ -232,12 +232,14 @@ exec_always feh --bg-center ~/Downloads/walls/tux.png
 #exec_always nm-applet
 #terminal transparente
 exec_always compton
+#screen timeout
+exec i3-sensible-terminal -e xset s 0 0
 #blue light filter
-exec i3-sensible-terminal -e redshift -x && redshift -O 3000
+exec i3-sensible-terminal -e redshift -O 3000
 # hotkeys minhas
 bindsym $mod+Ctrl+r exec i3-sensible-terminal -e ranger
 bindsym $mod+Ctrl+c exec codium .config/i3/config
 bindsym $mod+Ctrl+s exec pavucontrol
 bindsym $mod+Ctrl+f exec firefox
 bindsym $mod+Ctrl+n exec nemo
-bindsym Mod1+Ctrl+ŕ exec i3-sensible-terminal -e sudo systemctl start wpa_supplicant.service
+bindsym Mod1+Shift+r exec i3-sensible-terminal -e sudo systemctl start wpa_supplicant.service
