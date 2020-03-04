@@ -233,7 +233,9 @@ exec_always feh --bg-center ~/Downloads/walls/tux.png
 #terminal transparente
 exec_always compton
 #screen timeout
-exec i3-sensible-terminal -e xset s 0 0
+exec i3-sensible-terminal -e xset dpms 0 0 0
+exec i3-sensible-terminal -e xset -dpms
+exec i3-sensible-terminal -e xset s off
 #blue light filter
 exec i3-sensible-terminal -e redshift -O 3000
 # hotkeys minhas
