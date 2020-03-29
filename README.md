@@ -10,3 +10,7 @@ pulseaudio and pavucontrol for sound control
 scrot for print screen
 feh for wallpaper
 nemo file manager
+
+//solving special character fonts missing 
+sudo apt-get install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core -y
+dpkg-reconfigure fontconfig-config
