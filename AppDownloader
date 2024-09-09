@@ -6,5 +6,7 @@ apt-get install brightnessctl -y
 apt-get install rofi -y
 apt-get install polybar -y
 apt-get install alacritty -y
-
+apt-get install i3 -y
+apt-get install steam -y
+apt-get install gnome-control-center -y
 #etc.
