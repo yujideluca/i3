@@ -1,0 +1,10 @@
+#!/bin/sh
+apt-get update  # To get the latest package lists
+apt-get install feh -y
+apt-get install pavucontrol -y
+apt-get install brightnessctl -y
+apt-get install rofi -y
+apt-get install polybar -y
+apt-get install alacritty -y
+
+#etc.
