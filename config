@@ -18,11 +18,11 @@ exec --no-startup-id picom
 exec --no-startup-id feh --bg-scale ~/Wallpapers/layers.jpg
 exec --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+#if not working run: chmod +x ~/.config/polybar/launch_polybar.sh 
+exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh &
 
-#exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh &
-
-exec --no-startup-id killall polybar
-exec_always --no-startup-id polybar
+#exec --no-startup-id killall polybar
+#exec_always --no-startup-id polybar
 
 bindsym Print exec maim "/home/$USER/Pictures/$(date).jpg"
 bindsym $mod+Print exec maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date).jpg"
