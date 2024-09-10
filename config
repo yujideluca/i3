@@ -15,9 +15,10 @@ set $mod Mod4
 # set $mod Mod1
 
 exec --no-startup-id picom
-exec --no-startup-id feh --bg-scale ~/Wallpapers/layers.jpg
+exec --no-startup-id feh --bg-scale ~/wallpapers/landscape.jpg
 exec --no-startup-id xrdb -merge ~/.Xresources
-exec_always --no-startup-id setxkbmap -option ctrl:nocaps
+exec --no-startup-id setxkbmap br
+#exec_always --no-startup-id setxkbmap -option ctrl:nocaps
 #if not working run: chmod +x ~/.config/polybar/launch_polybar.sh 
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh &
 
@@ -195,7 +196,9 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-
+bar {
+        status_command i3status
+}
 set $rosewater #f5e0dc
 set $flamingo  #f2cdcd
 set $pink      #f5c2e7
